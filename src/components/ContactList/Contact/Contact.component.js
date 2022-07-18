@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import Button from 'components/common/Button';
 import { ContactCard, Name, Phone } from './Contact.styled';
 
-const Contact = ({ name, number, deleteContact }) => {
+const Contact = ({ name, number }) => {
     return (
         <ContactCard>
             <div>
@@ -13,9 +13,7 @@ const Contact = ({ name, number, deleteContact }) => {
                     {number}
                 </Phone>
             </div>
-            <Button
-                onClick={deleteContact}
-            >
+            <Button>
                 &#9587;
             </Button>
         </ContactCard>
@@ -25,7 +23,6 @@ const Contact = ({ name, number, deleteContact }) => {
 Contact.propTypes = {
     name: PropTypes.string.isRequired,
     number: PropTypes.string.isRequired,
-    deleteContact: PropTypes.func
 }
 
 export default Contact;
